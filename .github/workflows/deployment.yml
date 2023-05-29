@@ -1,9 +1,10 @@
 name: Deploy React App
-on:  push
-#    branches:
-#      - main
-#    paths-ignore:
-#      - '.github/workflows/*'
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   despicableMe:
     runs-on: windows-latest
@@ -35,6 +36,7 @@ jobs:
         run: npm run lint
   build:
     runs-on: windows-latest
+    needs: [lint, despicableMe]
     steps:
       - name: Get code from repo!
         uses: actions/checkout@v3
