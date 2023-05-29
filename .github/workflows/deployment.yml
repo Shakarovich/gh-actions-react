@@ -19,6 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Test React Application  with yaml
+        run: npm run test
     lint:
       runs-on: windows-latest
       steps:
