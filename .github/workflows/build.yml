@@ -19,8 +19,8 @@ jobs:
     needs: build
     runs-on: windows-latest
     steps:
-      name: Get build project
-      uses: actions/download-artifact@v3
-      with:
-        name: build-fl
+      - name: Get build project
+        uses: actions/download-artifact@v3
+        with:
+          name: build-fl
 
