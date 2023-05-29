@@ -1,4 +1,4 @@
-name: Print Pull Request Context
+name: print
 on: workflow_dispatch
 jobs:
   print:
